@@ -272,14 +272,14 @@
                     const data = await resp.json();
                     const imageUrl = data.results[0].url;
 
-                    statusDiv.innerHTML = '<div class="success">Neko anime girl is here!</div>';
-                    resultDiv.innerHTML = `<strong>Here is an anime girl called Neko:</strong><br><br>
+                    statusDiv.innerHTML = '<div class="success">Your photo is here!</div>';
+                    resultDiv.innerHTML = `<strong>Here is an your photo</strong><br><br>
                     <img src="${imageUrl}" alt="Neko image" style="max-width: 100%; max-height: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin: 10px 0;"><br><br>`;
 
                 } catch (error) {
                     console.error('Error:', error);
                     statusDiv.innerHTML = `<div class="error">Error: ${error.message}</div>`;
-                    resultDiv.innerHTML = `<div class="error">There will be no Neko girl anime :(</div>`;
+                    resultDiv.innerHTML = `<div class="error">There will be no your photo:(</div>`;
                 } finally {
                     btn1.disabled = false;
                     btn1.textContent = 'Request';
